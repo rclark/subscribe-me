@@ -9,6 +9,10 @@ $ git clone https://github.com/rclark/subscribe-me
 $ cd subscribe-me && npm link
 ```
 
+## Configure
+
+Make sure you have a `$GithubAccessToken` env var set
+
 ## Run once
 
 Sets up a local store of your present subscription states
