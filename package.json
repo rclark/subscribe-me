@@ -1,0 +1,32 @@
+{
+  "name": "subscribe-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc tape test/*.test.js"
+  },
+  "bin": {
+    "subscribe-me": "bin/subscribe-me.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rclark/subscribe-me.git"
+  },
+  "author": "Ryan Clark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rclark/subscribe-me/issues"
+  },
+  "homepage": "https://github.com/rclark/subscribe-me#readme",
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "nyc": "^6.4.4",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "d3-queue": "^2.0.3",
+    "level": "^1.4.0",
+    "request": "^2.72.0"
+  }
+}
