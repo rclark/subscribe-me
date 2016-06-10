@@ -29,9 +29,15 @@ fs.stat(path.resolve(__dirname, '..', 'db'), function(err) {
 
   if (command === 'dump') return s.dbStatus(function(err, subscriptions) {
     if (err) throw err;
+    var total = 0, subscribed = 0, unsubscribed = 0;
     subscriptions.forEach(function(subscription) {
-      console.log('%s - %s: %s', subscription.subscribed ? 'SUBSCRIBED' : 'NOT SUBSCRIBED', subscription.name, subscription.description);
+      total++;
+      if (subscription.subscribed) subscribed++;
+      else unsubscribed++;
+      
+      console.log('%s %s: %s', subscription.subscribed ? '✔' : '✘', subscription.name, subscription.description);
     });
+    console.log('%s repositories, %s subscriptions, %s not watching', total, subscribed, unsubscribed);
   });
 
   if (command === 'all') return s.all(function(err) {
